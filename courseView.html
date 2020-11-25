@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        #theme {
+            background-image: url("theme.jpg");
+            height: 250px;
+            border-radius: 10px;
+            width: 1000px;
+            padding: 20px;
+            color: white;
+        }
+        #deadline {
+            height: 150px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            float: left;
+            margin-left: 17.4%;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        #comment {
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            float: right;
+            margin-top: 20px;
+            margin-right: 17.4%;
+            padding: 20px;
+        }
+        #stream {
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            float: right;
+            margin-top: 20px;
+            margin-right: 17.4%;
+            padding: 20px;
+        }   
+        .col-2 {
+            width: 20%;
+        }
+
+        .col-8 {
+            width: 47%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        .dropbtn {
+            background-color: white;
+            border-radius:10px;
+            height: 30px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="theme">
+        <h2>HK1_2020_503073_Lập trình Web và ứng dụng_N02</h2>
+        <h4>Mai Văn Mạnh - Web - N2 - T4C3</h4>
+    </div>
+
+    <div class="col-2" id="deadline">
+        <h5>Sắp hết hạn</h5>
+        <p style="padding-top: 10px; color:#8c8c8c">Tuyệt vời, không có bài tập nào sắp đến hạn!</p>
+    </div>
+
+    <div class="col-8" id="comment">
+        <label for="cmt">Chia sẻ với lớp học của bạn</label><br />
+        <input type="text" id="cmt" name="cmt" style="border: none; border-bottom: 1px solid blue; height: 80px; width: 100%" />
+        <input type="button" value="Thêm" style="float: left; margin-top: 15px;" />
+        <input type="button" value="Đăng" style="float: right; margin-top: 15px" />
+    </div>
+
+    <div class="col-8" id="stream">
+        <p style="width: 200px"><i class="fas fa-user-circle" style="font-size: 40px; float: left"></i>Mai Văn Mạnh</p>
+        <div class="dropdown" style="float: right">
+            <button onclick="menuDropdown()" class="dropbtn">Setting</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#Edit">Edit</a>
+                <a href="#Delete">Delete</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-8" id="stream">
+        <label for="cmt">Chia sẻ với lớp học của bạn</label><br />
+        <input type="text" id="cmt" name="cmt" style="border: none; border-bottom: 1px solid blue; height: 80px; width: 100%" />
+        <input type="button" value="Đăng" style="float: right; margin-top: 15px" />
+
+    </div>
+
+
+    <script>
+        function menuDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
