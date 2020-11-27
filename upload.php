@@ -2,13 +2,13 @@
 	session_start();
 	$message = ''; 
 
-	$target_dir = "uploads/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-	$uploadOk = 1;
-	$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-	$allowedfileTypes = array('jpg', 'gif', 'png', 'rar', 'zip', 'txt', 'xls', 'doc', 'docx');
-
 	if(isset($_POST["submit"])) {
+		$target_dir = "uploads/";
+		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+		$uploadOk = 1;
+		$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+		$allowedfileTypes = array('jpg', 'gif', 'png', 'rar', 'zip', 'txt', 'xls', 'doc', 'docx');
+		
 		if ($fileType != "jpg" && $fileType != "gif" && $fileType != "png" && $fileType != "rar" && $fileType != "zip" && $fileType != "txt" 
 		&& $fileType != "xls" && $fileType != "doc" && $fileType != "docx") {
 			$uploadOk = 0;
@@ -36,5 +36,5 @@
 	}
 	
 	$_SESSION['message'] = $message;
-	header("Location: dangnhap.php");
+	header("Location: nopbt.php");
 ?>
