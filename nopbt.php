@@ -66,19 +66,26 @@ session_start();
 							}
 						?>
 						<form method="POST" action="upload.php" enctype="multipart/form-data">
-							<div>
-								<input type="file" id="fileToUpload" name="fileToUpload"/>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="file" id="fileToUpload" name="fileToUpload"/>
+									</div>
+								</div>
 							</div>
-
-							<input type="submit" id="uploadBtn" name="submit" value="Nộp bài"/>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="submit" id="uploadBtn" name="submit" value="Nộp bài"/>
+									</div>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Private Comment</h4>
-
-
 						<form action="/action_page.php">
 							<div class="input-group mb-3">
 								<input type="text" class="form-control" placeholder="Add comment" id="private_cmt" name="privatecomment">
@@ -86,7 +93,6 @@ session_start();
 							</div>
 						</form>
 						<table class="table table-hover" id="private_place"></table>
-										
 					</div>
 				</div>
 			</div>
