@@ -95,3 +95,12 @@ h1 {
 #uploadBtn {
 	margin-top: 10px;
 }
+
+#theme {
+	background-image: url("theme.jpg");
+	height: 250px;
+	border-radius: 10px;
+	padding:20px;
+	width: 1110px;
+	color: white;
+}

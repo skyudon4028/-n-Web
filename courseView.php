@@ -13,17 +13,6 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="main.js"></script>
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-	
-		<style>
-			#theme {
-            background-image: url("theme.jpg");
-            height: 250px;
-            border-radius: 10px;
-			padding:20px;
-			width: 1110px;
-            color: white;
-        }
-		</style>
 	</head>
 	<body>
 		<div class="container" id="theme">
@@ -40,13 +29,14 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="col-lg-9">
 					<div class="card">
 						<div class="card-body">
 							<h6 class="card-title">Chia sẻ với lớp học</h6>
 							<form action="/action_page.php">
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" id="cmt" name="comment">
+									<input type="text" class="form-control" id="cmt" name="comment" form="cmtForm">
 									<button type="button" class="btn btn-default" onclick="postCmt();"><span class="fas fa-location-arrow"></span></button>
 								</div>
 							</form>
@@ -57,17 +47,18 @@
 									unset($_SESSION['comment']);
 								}
 							?>
-							<form method="POST" action="upload.php" enctype="multipart/form-data">
+							<form method="POST" action="courseView_Upload.php" enctype="multipart/form-data" id="cmtForm">
 								<div>
 									<input type="file" id="uploadFile" name="uploadFile"/>
-									<input type="submit" id="uploadButton" name="submit" value="Đăng" style="float: right; margin-bottom: 10px"/>
+									<button onclick="addItem()" class="btn btn-add">Đăng</button>
 								</div>
 							</form>
 						</div>
 					</div>
+
 					<div class="card">
 						<div class="card-body">
-							<h6 class="d-inline-block align-middle"><i class="material-icons">person</i>Mai Văn Mạnh</h6>
+							<i class="material-icons">person</i>Mai Văn Mạnh
 								<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" style="margin-right: 10px;">Setting</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Edit</a>
@@ -76,8 +67,8 @@
 							<hr />
 							<form action="/action_page.php">
 								<div class="input-group mb-3">
-									<input type="text" class="form-control" id="cmt" name="commentStream">
-									<button type="button" class="btn btn-default" onclick="postCmtStream();"><span class="fas fa-location-arrow"></span></button>
+									<input type="text" class="form-control" id="cmt_Course" name="comment_Course">
+									<button type="button" class="btn btn-default" onclick="post_Course();"><span class="fas fa-location-arrow"></span></button>
 								</div>
 							</form>
 						</div>

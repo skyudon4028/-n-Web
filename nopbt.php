@@ -86,16 +86,7 @@ session_start();
 							</div>
 						</form>
 						<table class="table table-hover" id="private_place"></table>
-						
-						<form action="/action_page.php">
-							<div class="input-group mb-3">
-								<input type="text" class="form-control" placeholder="Add comment" id="cmt" name="comment">
-								<button type="button" class="btn btn-default" onclick="postCmt();"><span class="far fa-comment"></span></button>
-							</div>
-						</form>
-						<table class="table table-hover" id="cmtplace"></table>
-					
-					
+										
 					</div>
 				</div>
 			</div>
