@@ -73,3 +73,11 @@ function showPanel(panelIndex) {
     tabPanels[panelIndex].style.display="block";
 }
 showPanel(0);
+/*Edit class*/
+function openEditForm() {
+	document.getElementById("formEditClass").style.display = "inline-block";
+}
+
+function closeEditForm() {
+	document.getElementById("formEditClass").style.display = "none";
+}

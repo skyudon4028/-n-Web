@@ -61,15 +61,38 @@
 							</div>
 							<button class = "btn" type="button" data-toggle="dropdown"><i class="fas fa-ellipsis-v" aria-hidden ="false"></i></button>
 							<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Edit</a>
-									<a class="dropdown-item" href="#">Delete</a>
+									<button class="dropdown-item" onclick="openEditForm()">Edit</button>
+									<button class="dropdown-item" >Delete</button>
 							</div>
 						</div>
 						
 					</div>
 				</div>
 		</div>
+		
 	</div>
+	<div class="form-popup " id="formEditClass">
+			<form action="/action_page.php" class="form-container">
+				<h3 class = "headform text-center">Thông tin lớp học</h3>
+				
+				<label clafor="nameClass"><h5> Tên</h5></label>
+				<input type="text" placeholder="Tên lớp học" name="nameClass" required>
+
+				<label for="nameTeacher"><h5> Giáo viên</h5></label>
+				<input type="text" placeholder="Tên giáo viên" name="nameTeacher" required>
+				
+				<label for="nameSubject"><h5> Môn</h5></label>
+				<input type="text" placeholder="Tên môn học" name="nameSubject" required>
+				
+				<label for="nameRoom"><h5> Phòng</h5></label>
+				<input type="text" placeholder="Phòng học" name="nameRoom" required>
+				
+				<button type="submit" class="savebtn col-sm-2">Save</button>
+				<button type="button" class="closebtn col-sm-2" onclick="closeEditForm()">Close</button>
+
+			</form>
+		</div>
+	
 </body>
 
 </html>
