@@ -79,6 +79,5 @@
 	}
 	
 	$_SESSION['message'] = $message;
-	$_SESSION['table'] = $mess_table;
 	header("Location: nopbt.php");
 ?>
