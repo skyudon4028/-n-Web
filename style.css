@@ -214,7 +214,7 @@
 
 /* Nop bai */
 .navbar-custom {
-    background-color: gray;
+    background-color: #B0BBAD;
 }
 
 .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
@@ -296,7 +296,7 @@ h1 {
 .openbtn {
 	font-size: 20px;
 	cursor: pointer;
-	background-color: gray;
+	background-color: #B0BBAD;
 	color: black;
 	padding: 10px 15px;
 	border: none;
@@ -346,4 +346,35 @@ h1 {
 .tabContainer .buttonContainer button:hover{
     background-color: #d7d4d4;
 }
+
+/*list class*/
+#gridClass{
+	padding:15px
+}
+#gridClass #cardClass #infClass{
+	background-color: #FFFFFF;
+	border-bottom: 0.5px solid #1D798A;
+}
+
+#gridClass #cardClass .card .card-footer .btn-wrapper {
+	position: relative;
+}
+#gridClass #cardClass .card .card-footer .btn-wrapper .btn{
+	position: absolute;
+	margin-right:15px;
+	color:#2B4141;
+}
+#gridClass #cardClass .card .card-footer .btn{
+	color:#2B4141;
+}
+#gridClass #cardClass .card .card-footer{
+	height:40px;
+	padding: 4px;
+	background-color: #FFFFFF;
+}
+.navbar-item{
+	margin-right:10px;
+	color: #f1f1f1;
+}
+
 
