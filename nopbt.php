@@ -1,5 +1,10 @@
 <?php
-session_start(); 
+	session_start();
+	
+	$conn = mysqli_connect("127.0.0.1", "root", "", "uploadfile");
+	if ($conn->connect_error) {
+		die("Connection failed:" .$conn->connect_error);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,6 +63,23 @@ session_start();
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Nộp bài</h4>
+						<p class="card-text">Danh sách file</p>
+						<table class="table table-hover" id="file_upload">
+							<?php
+								$sql = "SELECT file_name FROM fileinfo";
+								$result = $conn->query($sql);
+								
+								if ($result->num_rows > 0) {
+									while ($row = $result->fetch_assoc()) {
+										echo "<tr><td><a href='uploads/" .$row['file_name']. "' download>" .$row['file_name']. "</a></td></tr>";
+									}
+								} else {
+									echo "No files submit";
+								}
+								
+								$conn->close();
+							?>
+						</table>
 						<?php
 							if (isset($_SESSION['message']) && $_SESSION['message'])
 							{
