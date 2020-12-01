@@ -15,8 +15,6 @@
 			$uploadDone = 1;
 		}
 	}
-    if ($_FILES["uploadFile"]["size"] > 5000000) {
-        $comment = "Too large";
     } else {
         if ($uploadDone == 0) {
             $comment = "This file type is not supported";

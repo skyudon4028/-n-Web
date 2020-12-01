@@ -57,3 +57,19 @@ function closeNav() {
 	document.getElementById("mySidebar").style.width = "0";
 	document.getElementById("main").style.marginLeft= "0";
 }
+
+var tabButtons = document.querySelectorAll(".tabContainer .buttonContainer button");
+var tabPanels = document.querySelectorAll(".tabContainer  .tabPanel");
+
+function showPanel(panelIndex) {
+    tabButtons.forEach(function(node){
+        node.style.backgroundColor="";
+        node.style.color="";
+    });
+    tabButtons[panelIndex].style.color="white";
+    tabPanels.forEach(function(node){
+        node.style.display="none";
+    });
+    tabPanels[panelIndex].style.display="block";
+}
+showPanel(0);
