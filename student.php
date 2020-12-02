@@ -24,7 +24,7 @@
 		<div class="tabPanel" style="margin-top:50px">
 			<i class="fa fa-user-circle" style="font-size: 40px">GIÁO VIÊN</i>
 			<hr/>
-			<i class="fa fa-user-circle">Mai Văn Mạnh</i>
+			<i class="fa fa-user-circle" id="student">Mai Văn Mạnh</i>
 			<hr/>
 			<i class="fa fa-user-circle">Lê Hữu Cường</i>
 			<hr/>
@@ -36,7 +36,7 @@
 				<i class="fa fa-user-circle" style="font-size: 40px">BẠN HỌC</i>
 				<button type="button" style="float: right">Add</button>
 				<hr/>
-				<i class="fa fa-user-circle">Mạch Trung Tín</i>
+				<i class="fa fa-user-circle" id="student">Mạch Trung Tín</i>
 				<hr/>
 				<i class="fa fa-user-circle">Nguyễn Xuân Thanh Nhàn</i>
 				<hr/>

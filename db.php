@@ -184,4 +184,14 @@
 			echo "".$conn->error;
 		}
 	}
+
+	function user_class($email, $token){
+		$sql = "Insert in to class values('$email', '$token')";
+		$conn = open_db();
+		if($conn->query($sql)===TRUE){
+			echo "Connect success";
+		} else{
+			echo "".$conn->error;
+		}
+	}
  ?>

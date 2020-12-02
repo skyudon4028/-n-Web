@@ -283,6 +283,9 @@ h1 {
 	border-radius: 10px;
 	margin-left: 520px;
 }
+#student{
+	font-size: 50px;
+}
 /*list class*/
 #gridClass{
 	padding:15px
