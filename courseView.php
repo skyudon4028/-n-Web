@@ -16,7 +16,13 @@
 
 	</head>
 	<body>
+		<div>
+			<a href="courseView.php" class="button-left">Stream</a>
+			<a href="student.php" class="button-right">Student</a>
+		</div>
+		<p class="space"></p>
 		<div class="container" id="theme">
+			
 			<h2>HK1_2020_503073_Lập trình Web và ứng dụng_N02</h2>
 			<h4>Mai Văn Mạnh - Web - N2 - T4C3</h4>
 		</div>
@@ -61,13 +67,14 @@
 					<div class="card">
 						<div class="card-body">
 							<i class="material-icons">person</i>Mai Văn Mạnh
+							<a href="nopbt.php" class="button-go">Go</a>
 							<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">Setting</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Edit</a>
 								<a class="dropdown-item" href="#">Delete</a>
 							</div>
-							<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-							<a href="test_file.zip" download>Download File</a>
+							<p>Kiểm tra quá trình - 10% Buổi học tuần tới (buổi cuối) thầy sẽ tổ chức kiểm tra trắc nghiệm lấy điểm quá trình dưới
+							 hình thức là trắc nghiệm trên Google Forms. Vì vậy các em cần chuẩn bị trước điện thoại + mạng 3G/4G để truy cập Google Forms làm bài.</p>
 							<hr />
 							<form action="/action_page.php">
 								<div class="input-group mb-3">
@@ -81,12 +88,14 @@
 					<div class="card">
 						<div class="card-body">
 							<i class="material-icons">person</i>Mai Văn Mạnh
+							<a href="nopbt.php" class="button-go">Go</a>
 								<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">Setting</button>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Edit</a>
 								<a class="dropdown-item" href="#">Delete</a>
 							</div>
-							<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+							<p>Chào cả lớp,Ôn tập các giải thuật DFS, BFS, Dijkstra, Ford_Bellman để thứ 7 tuần này (31/10/2020) mình làm bài kiểm 
+								tra thứ hai của phần thực hành nhé. Tuần sau thực hành chuỗi tắng/ giảm dài nhất và tổng kết điểm NHỚ ÔN BÀI NHÉ</p>
 							<a href="test_file.zip" download>Download File</a>
 							<hr />
 							<form action="/action_page.php">

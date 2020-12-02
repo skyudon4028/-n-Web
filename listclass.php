@@ -50,7 +50,7 @@
 					<div class="card">
 						<img class="card-img-top" src="img/theme.jpg" width="100%">
 						<div class="card-body" id = "infClass">
-							<h4 class="card-title">Name Class</h4>
+							<a href="courseView.php" class="card-title">Name Class</a>
 							<p class="card-text">
 								Name teacher
 							</p>

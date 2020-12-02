@@ -17,33 +17,42 @@
 	</head>
 	<body>
 	<div class="container">
-		<div class="tabContainer">
-			<div class="buttonContainer">
-				<button onclick="showPanel(0)">Tab 1</button>
-				<button onclick="showPanel(1)">Tab 2</button>
-			</div>
-			<div class="tabPanel" style="margin-top:50px">
-				<i class="fa fa-user-circle" style="font-size: 40px">GIÁO VIÊN</i>
-				<hr/>
-				<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-				<hr/>
-				<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-				<hr/>
-				<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-			</div>
+		<div>
+			<a href="courseView.php" class="button-left">Stream</a>
+			<a href="student.php" class="button-right">Student</a>
+		</div>
+		<div class="tabPanel" style="margin-top:50px">
+			<i class="fa fa-user-circle" style="font-size: 40px">GIÁO VIÊN</i>
+			<hr/>
+			<i class="fa fa-user-circle">Mai Văn Mạnh</i>
+			<hr/>
+			<i class="fa fa-user-circle">Lê Hữu Cường</i>
+			<hr/>
+			<i class="fa fa-user-circle">Trần Xuân Diệu</i>
+		</div>
 			
-			<div class="tabPanel">
-				<div class="tabPanel" style="margin-top: 50px">
-					<i class="fa fa-user-circle" style="font-size: 40px">BẠN HỌC</i>
-					<button type="button" style="float: right">Add</button>
-					<hr/>
-					<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-					<hr/>
-					<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-					<hr/>
-					<i class="fa fa-user-circle">Mai Văn Mạnh</i>
-				</div>
+		<div class="tabPanel">
+			<div class="tabPanel" style="margin-top: 50px">
+				<i class="fa fa-user-circle" style="font-size: 40px">BẠN HỌC</i>
+				<button type="button" style="float: right">Add</button>
+				<hr/>
+				<i class="fa fa-user-circle">Mạch Trung Tín</i>
+				<hr/>
+				<i class="fa fa-user-circle">Nguyễn Xuân Thanh Nhàn</i>
+				<hr/>
+				<i class="fa fa-user-circle">Phạm Quốc Việt</i>
+				<hr/>
+				<i class="fa fa-user-circle">Nguyễn Hoàng Hưng</i>
+				<hr/>
+				<i class="fa fa-user-circle">Tiêu Chí Kiên</i>
+				<hr/>
+				<i class="fa fa-user-circle">Phùng Bảo Nghi</i>
+				<hr/>
+				<i class="fa fa-user-circle">Nguyễn Trần Quỳnh Như</i>
+				<hr/>
+				<i class="fa fa-user-circle">Đoàn Ngọc Giỏi</i>
 			</div>
+		</div>
 		</div>
 	</div>
 	</body>
