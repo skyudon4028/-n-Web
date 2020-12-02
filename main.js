@@ -196,3 +196,21 @@ function openEditForm() {
 function closeEditForm() {
 	document.getElementById("formEditClass").style.display = "none";
 }
+/*New class*/
+function openNewClass() {
+	document.getElementById("formNewClass").style.display = "inline-block";
+}
+function closeNewClass() {
+	document.getElementById("formNewClass").style.display = "none";
+}
+/*Register Class*/
+function openRegisterClass(){
+	document.getElementById("formRegisterClass").style.display = "inline-block";
+}
+function closeRegisterClass(){
+	document.getElementById("formRegisterClass").style.display = "none";
+}
+/*Delete Class*/
+function deleteClass(){
+	
+}

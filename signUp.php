@@ -1,6 +1,6 @@
 <?php
-    session_start();
-   require_once("db.php");
+   session_start();
+   include("db.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,34 +11,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php 
-        $error = '';
-        if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['fullname']) && isset($_POST['dateofbirth']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['password-confirmation'])) {
+	<?php
 
-            $fullname = $_POST['fullname'];
-            $username = $_POST['username'];
-            $phone = $_POST['phone'];
-            $dateofbirth = $_POST['dateofbirth'];
-            $password = $_POST['password'];
-            $email = $_POST['email'];
+	$error = '';
+	if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['fullname']) && isset($_POST['dateofbirth']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['password-confirmation'])) {
 
-            $result = signUp($username, $password, $fullname, $dateofbirth, $email, $phone);
+		$fullname = $_POST['fullname'];
+		$username = $_POST['username'];
+		$phone = $_POST['phone'];
+		$dateofbirth = $_POST['dateofbirth'];
+		$password = $_POST['password'];
+		$email = $_POST['email'];
 
-            if($result['code'] == 0){
-                $error = 'SIGN UP SUCCESSFUL';
-                header('Location: signIn.php');
-                exit();
-            } else if($result['code'] == 1){
-                $error = 'This email is already exists';
-            } else if($result['code'] == 3){
-                $error = 'This username is already exists';
-            } else{
-                $error = 'An error occured. Please try again later';
-            }
-        }
-     ?>
+		$result = signUp($username, $password, $fullname, $dateofbirth, $email, $phone);
+		if($result['code'] == 0){
+			$error = 'SIGN UP SUCCESSFUL';
+			header('Location: signIn.php');
+			exit();
+		} else if($result['code'] == 1){
+			$error = 'This email is already exists';
+		} else if($result['code'] == 3){
+			$error = 'This username is already exists';
+		} else{
+			$error = 'An error occured. Please try again later';
+		}
+	}
+	else{
+		echo "unable";
+	}
+?>
     <div class="main">
-        <form action="signIn.php" method="POST" class="form" id="form-1">
+        <form action="signUp.php" method="POST" class="form" id="form-1">
             <h1>Sign up</h1>
 
             <div class="form-group-signup">

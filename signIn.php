@@ -1,8 +1,7 @@
-<?php
-    session_start();
-
-   require_once("db.php");
-?>
+	<?php
+	   session_start();
+	   include("db.php");
+	 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,21 +11,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-        if (isset($_POST['username']) && isset($_POST['password'])) {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+   <?php
+		$error = null;
+		if (isset($_POST['username']) && isset($_POST['password'])) {
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			
+			$data = login($username, $password);
+			if($data === 0 || $data === 1){
+				$error = "Sai mat khau/ten dang nhap";
+			}
+			else{
+				$_SESSION['username'] = $username;
+				header('Location: listclass.php');
+				exit();
+			}
+		}
 
-            $data = login($username, $password);
-            if($data){
-                $_SESSION['username'] = $username;
-                header('Location: home.php');
-                exit();
-            }
-        }
-    ?>
+	?>
     <div class="main">
-        <form action="listclass.php" method="POST" class="form" id="form-2">
+        <form  method="POST" class="form" id="form-2">
             <h1>Login</h1>
 
             <div class="form-group">
@@ -46,10 +50,11 @@
             <button class="form-submit">Sign in</button>
 
             <p>Don't have account?<a href="signUp.php" class="form-link">Sign up here</a></p>
-     
-        </form>
-    </div>
+			<p name = "errorLogin"><?="".$error?></p>
 
+        </form>
+
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

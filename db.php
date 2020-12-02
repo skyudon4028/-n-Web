@@ -31,13 +31,15 @@
 
 		$result =  $stm->get_result();
 		if ($result->num_rows == 0) {
-			return null;
+			return 0;
 		}
 		$data = $result->fetch_assoc();
 
 		$hashed_password = $data['password'];
+
 		if(!password_verify("$password", "$hashed_password")){
-			return null;
+
+			return 1;
 		} else return $data;
 	}
 
@@ -172,5 +174,14 @@
 			return array('code' => 2, 'error' => 'Cant Execute');
 		}
 		return array('code' => 0, 'error' => 'Password is changed successfully');
+	}
+	function add_class($nameClass,$nameTeacher,$nameSubject,$nameRoom,$teacherID){
+		$sql = "Insert into class values(0,'$nameClass','$nameTeacher','$nameSubject','$nameRoom','$teacherID')";
+		$conn = open_db();
+		if($conn->query($sql)===TRUE){
+			echo "Success";
+		}else{
+			echo "".$conn->error;
+		}
 	}
  ?>
