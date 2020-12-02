@@ -1,217 +1,149 @@
-/* Login */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.main {
-    background-image: url("theme.jpg");
-    background-size: cover;
-    min-height: 800px;
-    display: flex;
-    justify-content: center;
-  }
-
-.form {
-    margin-top: 140px;
-    width: 300px;
-    height: 450px;
-    padding: 20px;
-    text-align: center;
-    background: white;
-    border-radius: 30px;
-}
-    
-.form .head{
-    font-size: 20px;
-}
-
-#form-Login {
-    width: 750px;
-  }
-   
-.form .desc {
-    text-align: center;
-    color: #636d77;
-    font-size: 1.6rem;
-    font-weight: lighter;
-    line-height: 2.4rem;
-    margin-top: 16px;
-    font-weight: 300;
+/* login */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
   }
   
-.form-row-parent {
-    display: flex;
-    justify-content: space-between;
+  html {
+	font-family: "Times New Roman", Times, serif;  
+	font-size: 15px;
   }
   
-.form-row-parent .form-control {
-    width: 330px;
+  /* Form login */
+  .main {
+	display: flex;
+	justify-content: center;
+	background-image: url("theme.jpg");
+	height: 780px;
+	background-size: cover;
   }
   
-.form-row-parent .phone_dateofbirth .form-control {
-    width: 80%;
+  .form {
+	width: 400px;
+	padding: 30px;
+	text-align: center;
+	background: white;
+	border-radius: 20px;
+	align-self: center;
   }
   
-  .form-row {
-    display: flex;
-    margin-bottom: 16px;
-    flex-direction: column;
+  #form-1 {
+	width: 800px;
   }
   
-  .form-left,
-  .form-message {
-    text-align: left;
+  .form .desc {
+	text-align: center;
+	font-size: 25px;
+	font-weight: lighter;
+	margin-top: 15px;
   }
   
-  .form-left {
-    font-weight: 700;
-    padding-bottom: 6px;
-    line-height: 1.8rem;
-    font-size: 1.4rem;
+  .form-group-signup {
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .form-group-signup .form-control {
+	width: 330px;
+  }
+  
+  .form-group {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .form-label{
+	text-align: left;
+  }
+  
+  .form-label {
+	padding-bottom: 10px;
+  }
+  
+  .form-error {
+	text-align: left;
   }
   
   .form-control {
-    height: 40px;
-    padding: 15px;
-    padding-top: 20px;
-    border: 1px solid #7e7c7c;
-    border-radius: 10px;
-
+	height: 45px;
+	padding: 10px;
+	border: 1px solid #b3b3b3;
+	border-radius: 10px;
   }
   
   .form-control:hover {
-    border-color: #1100ff;
+	border-color: rgb(0, 217, 255);
   }
   
-  .form-row.invalid .form-control {
-    border-color: #f33a58;
+  .form-group.invalid .form-control {
+	border-color: #ff0000;
   }
   
-  .form-row.invalid .form-message {
-    color: #f33a58;
-  }
-  
-  .form-message {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    padding: 4px 0 0;
+  .form-group.invalid .form-message {
+	color: #ff0000;
   }
   
   .form-submit {
-    outline: none;
-    background-image: linear-gradient(rgb(54, 17, 221), rgb(139, 97, 255));
-    margin-top: 20px;
-    width: 200px;
-    padding: 12px;
-    color: white;
-    font-size: 20px;
-    border-radius: 10px;
+	background-image: linear-gradient(0deg, rgb(132, 5, 216), rgb(61, 7, 189));
+	padding: 10px;
+	color: white;
+	width: 70%;
+	border-radius: 10px;
+	font-size: 20px;
   }
   
   #form-1 .form-submit {
-    width: 50%;
+	width: 50%;
+  }
+  #form-1 .space{
+	margin: 20px;
   }
   
   .form-submit:hover {
-    background-color: #1ac7b6;
+	background-color:rgb(0, 217, 255);
   }
   
-  .space {
-    margin-top: 36px;
+  .form-link {
+	color: rgb(0, 217, 255);
   }
   
-  .form-nav-login {
-    font-size: 20px;
-    margin: 20px;
+  .form-group-forgot {
+	float: right;
+	color: rgb(0, 217, 255);
   }
   
-  .form-nav-login-link {
-    color:  rgb(0, 110, 253);
-    text-decoration: none;
-  }
-  
-  .form-nav-login-link:hover {
-    text-decoration: underline;
-  }
-  
-  ::placeholder {
-    font-size: 1.3rem;
-  }
-  
-  .form-row-remember {
-    display: flex;
-    align-items: center;
-  }
-  
-  .form-row-remember-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .form-row-remember .form-label{
-    position: relative;
-    top: 3px;
-    padding-left: 6px;
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-  
-  .form-row-remember-right .forgot-password {
-    text-decoration: none;
-    color:  rgb(33, 20, 228);
-    font-size: 1.2rem;
-    margin-left: 410px;
-  }
-  
-  .form-row-remember-right .forgot-password:hover {
-    text-decoration: underline;
-  }
-  
-  .phone_dateofbirth {
-    display: flex;
-    justify-content: space-between;
-  }
-
   /* Forgot Password */
-.main-forgot {
-    background-image: url("theme.jpg");
-    background-size: cover;
-    min-height: 800px;
-    display: flex;
-    justify-content: center;
+  .main-forgot {
+	background: #f1f1f1;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
   }
   
   .main-forgot #form-3 {
-    width: 410px;
-    min-height: 100px;
-    padding: 32px 28px;
-    text-align: center;
-    background: #fff;
-    border-radius: 24px;
-    align-self: start;
-    margin-top: 100px;
+	width: 410px;
+	min-height: 100px;
+	padding: 32px 28px;
+	text-align: center;
+	background: #fff;
+	border-radius: 24px;
+	align-self: start;
+	margin-top: 100px;
+	box-shadow: 0 2px 4px 0 rgb(51, 62, 73);
   }
   
   #form-3 .space {
-    margin-top: 24px;
+	margin-top: 24px;
   }
   
   #form-3 .form-mess {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    text-align: left;
-    font-weight: 500;
+	text-align: left;
   }
   
   #form-3 .form-submit {
-    width: 80%;
+	width: 80%;
   }
-
-
-
-
 /* Nop bai */
 .navbar-custom {
     background-color: #B0BBAD;

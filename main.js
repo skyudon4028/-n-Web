@@ -1,3 +1,132 @@
+function checkInput(options) {
+
+    var selectorRules = {};
+
+    function validate(inputElement, rule) {
+
+        var errorElement = inputElement.closest('.form-group').querySelector(options.errorSelector);
+        var errorMessage;
+        var rules = selectorRules[rule.selector];
+
+        for (var i = 0; i < rules.length; i++) {
+            errorMessage = rules[i](inputElement.value);
+            if (errorMessage) break;
+        }
+        if (errorMessage) {
+            errorElement.innerText = errorMessage;
+            inputElement.closest('.form-group').classList.add('invalid');
+        } else {
+            errorElement.innerText = '';
+            inputElement.closest('.form-group').classList.remove('invalid');
+        }
+        return errorMessage;
+    }
+    var formElement = document.querySelector(options.form);
+    if (formElement) {
+        formElement.onsubmit = function(e) {
+          
+            e.preventDefault();
+            var isFormValid = true;
+
+            options.rules.forEach(function(rule) {
+                var inputElement = formElement.querySelector(rule.selector);
+                var isValid = validate(inputElement, rule);     // Không lỗi trả về false
+                if (isValid) {
+                    isFormValid = false;
+                }
+            });
+            if (isFormValid) {
+                formElement.submit();
+            }
+        }
+        options.rules.forEach(function(rule) {
+            if (Array.isArray(selectorRules[rule.selector])) {
+                selectorRules[rule.selector].push(rule.test);
+            } else {
+                selectorRules[rule.selector] = [rule.test];
+            }
+
+            var inputElement = formElement.querySelector(rule.selector);
+
+            if (inputElement) {
+                inputElement.onblur = function() {
+                    validate(inputElement, rule);
+                }
+                inputElement.oninput = function() {
+                    var errorElement = inputElement.closest('.form-group').querySelector(options.errorSelector);
+                    errorElement.innerText = '';
+                    inputElement.closest('.form-group').classList.remove('invalid');
+                }
+            }
+        });
+    }
+}
+
+checkInput.isRequired = function(selector) {
+    return {
+        selector: selector,
+        test: function(value) {
+            return value.trim() ? undefined : 'Please enter this field'
+        }
+    };
+}
+
+checkInput.minLength = function(selector, min) {
+    return {
+        selector: selector,
+        test: function(value) {
+            return value.length >= min ? undefined : `Please enter at least ${min} characters`
+        }
+    };
+}
+
+checkInput.isConfirmed = function(selector, getConfirmValue) {
+    return {
+        selector: selector,
+        test: function(value) {
+            return value === getConfirmValue() ? undefined : 'Confirm password does not match'
+        }
+    };
+}
+
+
+
+checkInput({
+    form: '#form-2',
+    errorSelector: '.form-message',
+    rules: [
+        checkInput.isRequired('#username'),
+        checkInput.minLength('#password', 6)
+    ]
+});
+
+checkInput({
+    form: '#form-1',
+    errorSelector: '.form-message',
+    rules: [
+        checkInput.isRequired('#fullname'),
+        checkInput.isRequired('#username'),
+        checkInput.isRequired('#email'),
+        checkInput.isEmail('#email'),
+        checkInput.isPhone('#phone'),
+        checkInput.isDateOfBirth('#dateofbirth'),
+        checkInput.minLength('#password', 6),
+        checkInput.isRequired('#password-confirmation'),
+        checkInput.isConfirmed('#password-confirmation', function() {
+            return document.querySelector('#form-1 #password').value;
+        })
+    ]
+});
+
+checkInput({
+    form: '#form-3',
+    errorSelector: '.form-message',
+    rules: [
+        checkInput.isRequired('#email'),
+        checkInput.isEmail('#email')
+    ]
+});
+
 function postCmt() {
 	let cmtfield = document.getElementById('cmt');
 	var table = document.getElementById('cmtplace');
