@@ -10,6 +10,16 @@
 	define('PASS', '');
 	define('DB', 'web');
 
+	class DB_Connection {
+		private $connect;
+		function __construct() {
+			$this->connect=mysqli_connect(HOST,USER,PASS,DB) or die("DB Connection error.");
+		}
+		public function get_connection() {
+			return $this->connect;
+		}
+	}
+	
 	function open_db(){
 		$conn = new mysqli(HOST, USER, PASS, DB);
 		if($conn->connect_error){
