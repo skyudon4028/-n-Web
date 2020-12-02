@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	$conn = mysqli_connect("127.0.0.1", "root", "", "projectweb");
+	$conn = mysqli_connect("127.0.0.1", "root", "", "web");
 	if ($conn->connect_error) {
 		die("Connection failed:" .$conn->connect_error);
 	}
