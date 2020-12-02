@@ -27,9 +27,9 @@
 		<button class="openbtn navbar-brand" onclick="openNav()"><i class="fa fa-bars"></i></button>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a id="classname" href="#">
-					<h6>Class Name</h6>
-					<p>Thầy</p>
+				<a id="classname" href="courseView.php">
+					<h6>HK1_2020_503073_Lập trình Web và ứng dụng_N02</h6>
+					<p>Mai Văn Mạnh - Web - N2 - T4C3</p>
 				</a>
 			</li>
 		</ul>
@@ -37,7 +37,7 @@
 	
 	<div id="mySidebar" class="sidebar">
 		<a href="#" class="closebtn" onclick="closeNav()"><i class="fa fa-angle-double-left"></i></a>
-		<a href="#"><i class="fa fa-home"> Classes</i></a>
+		<a href="listclass.php"><i class="fa fa-home"> Classes</i></a>
 		<a href="#"><i class="fa fa-calendar"> Calendar</i></a>
 		<a href="#"><i class="fas fa-clipboard-list"> To do</i></a>
 	</div>
